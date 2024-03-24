@@ -19,10 +19,11 @@ function SideNav() {
   const {filelist_,setfilelist_}=useContext(FileListContext);
   const onFileCreate = (fileName: string) => {
     console.log(fileName);
+    
     createFile({
       fileName: fileName,
-      teamid: activeTeam?._id,
-      createdBy: user?.email,
+      teamid: activeTeam?._id ? activeTeam._id : "",
+      createdBy: user?.email ? user?.email:"" ,
       archive: false,
       document: "",
       whiteboard: "",
@@ -40,7 +41,7 @@ function SideNav() {
   };
   const getFiles = async () => {
     const result = await convex.query(api.file.getFiles, {
-      teamid: activeTeam?._id,
+      teamid: activeTeam?._id ? activeTeam._id : "",
     });
     console.log(result);
     setfilelist_(result);
