@@ -20,7 +20,7 @@ export interface FILE{
   createdBy:string,
   document:string,
   fileName:string,
-  teamid:string,
+  teamId:string,
   whiteboard:string,
   _id:string,
   _creationTime:number
