@@ -21,7 +21,7 @@ function SideNav() {
     console.log(fileName);
     createFile({
       fileName: fileName,
-      teamId: activeTeam?._id,
+      teamid: activeTeam?._id,
       createdBy: user?.email,
       archive: false,
       document: "",
@@ -40,7 +40,7 @@ function SideNav() {
   };
   const getFiles = async () => {
     const result = await convex.query(api.file.getFiles, {
-      teamId: activeTeam?._id,
+      teamid: activeTeam?._id,
     });
     console.log(result);
     setfilelist_(result);

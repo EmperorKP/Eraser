@@ -41,14 +41,14 @@ function Header() {
                     <div className="sm:flex sm:gap-4">
                     <a
                         className="block rounded-md  px-5 py-2.5 text-sm font-medium text-white transition"
-                        href="#"
+                        
                     >
                        <LoginLink postLoginRedirectURL="/dashboard">  Login </LoginLink>
                     </a>
 
                     <a
                         className="hidden rounded-md bg-gray-100  px-5 py-2.5 text-sm font-medium text-black transition hover:text-slate-800 sm:block"
-                        href="#"
+                        
                     >
                         <RegisterLink>Register</RegisterLink>
                         
